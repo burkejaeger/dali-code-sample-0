@@ -1,0 +1,25 @@
+{
+  "name": "starterpack-burkejaeger",
+  "version": "1.0.0",
+  "description": "package for starterpack SA for COSC 52",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test-starterpack-jaeger",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dartmouth-cs52-22S/starterpack-burkejaeger.git"
+  },
+  "author": "Jaeger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dartmouth-cs52-22S/starterpack-burkejaeger/issues"
+  },
+  "homepage": "https://github.com/dartmouth-cs52-22S/starterpack-burkejaeger#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  }
+}
