@@ -5,6 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const autoprefixer = require('autoprefixer');
+const postcssPresets = require('postcss-preset-env');
+
 const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { loader: 'style-loader' };
 
 module.exports = {
@@ -31,12 +34,32 @@ module.exports = {
             },
           },
           {
+            loader: 'postcss-loader',
+            ident: 'postcss',
+            options: {
+              sourceMap: true,
+              postcssOptions: {
+                plugins: [
+                  autoprefixer(),
+                  postcssPresets({ browsers: 'last 2 versions' }),
+                ],
+              },
+            },
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
           },
         ],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name].[contenthash][ext][query]',
+        },
       },
     ],
   },

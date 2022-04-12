@@ -4,8 +4,11 @@
   "description": "package for starterpack SA for COSC 52",
   "main": "src/index.js",
   "scripts": {
-    "test": "test-starterpack-jaeger",
-    "start": "NODE_ENV=development webpack serve"
+    "start": "NODE_ENV=development webpack serve",
+    "test": "eslint src",
+    "build": "npm run clean; NODE_ENV=production webpack --color",
+    "winbuild": "npm run clean & SET NODE_ENV=production& webpack --color",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
     "@babel/core": "^7.17.9",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
     "eslint": "^8.13.0",
@@ -32,6 +36,8 @@
     "eslint-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.3",
     "sass": "^1.50.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
