@@ -7,7 +7,7 @@ import weatherReducer from './weather-reducer';
 
 const rootReducer = combineReducers({
   count: CountReducer,
-  data: weatherReducer,
+  weatherSearch: weatherReducer,
 });
 
 export default rootReducer;
