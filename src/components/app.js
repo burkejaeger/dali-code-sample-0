@@ -2,9 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router, Route, Routes, NavLink, useParams,
 } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import { TextField } from '@mui/material';
-import { SearchRounded } from '@mui/icons-material';
+
+import Citysearch from './citysearch';
 // import Counter from './counter';
 // import Controls from './control';
 
@@ -14,18 +13,7 @@ function About(props) {
 function Welcome(props) {
   return (
     <div>
-      <section className="city-search-banner">
-        <form className="search-form">
-          <div className="app-name">
-            Weather App
-          </div>
-          <div className="city-search-input">
-            <TextField variant="standard" type="text" label="Search for a city" />
-            <Button variant="contained" endIcon={<SearchRounded />} size="large">SUBMIT</Button>
-            <span className="msg" />
-          </div>
-        </form>
-      </section>
+      <Citysearch />
       <section className="cities-section">
         <ul className="cities-list" />
       </section>
