@@ -1,28 +1,28 @@
 body, html {
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, #87e0fd 0%,#ff8ac8 40%,#05e081 100%);
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(to bottom, #87e0fd 0%, #05e081 100%);
     height: 100%;
     color: rgb(79, 79, 79)
-  }
-
-  .logo {
-    background-image: url('img/bluepinkdot.png');
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+}
 
 
-  .active {
-    color: forestgreen;
-  }
+.active {
+  color: black;
+  box-shadow: 0px 2px 0px black;
+}
 
 nav ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   margin: 20px;
+  margin-top: 40px;
+}
+
+nav ul a{
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 2px 0px transparent;
 }
 
 .weather-card{
@@ -30,10 +30,31 @@ nav ul{
   width: auto;
   margin-left: 30vw;
   margin-right: 30vw;
-  margin-top: 10vh;
+  margin-top: 2vh;
   margin-bottom: 10vh;
   padding: 20px;
+}
 
+.search-card{
+  display: flex;
+  width: auto;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  padding: 20px;
+  justify-content: center;
+
+}
+
+.city-search-input{
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+search-form{
+  width: 100%;
 }
   
 
@@ -47,17 +68,65 @@ nav ul{
 
 .weather-card-temp{
   display: flex;
-  justify-content: flex-end;
+  justify-self: flex-end;
   font-size: 2em;
 }
 
 .weather-card-icon{
   width: 1000px;
   max-width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.weather-card-icon-wrapper{
+  justify-content: center;
 }
 
 .location-wrapper{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.weather-card-icon-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name{
+  font-family: 'Rubik', sans-serif;
+  font-size: 2em;
+  margin-bottom: 3px;
+  color: #9c27b0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.weather-now{
+  margin-left: 5px;
+}
+
+.future-release-card{
+  display: flex;
+  width: auto;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.future-release{
+  font-size: 1.5em;
+  margin-bottom: 3px;
+}
+.description-2{
+  font-size: 1em;
 }

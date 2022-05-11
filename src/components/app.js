@@ -2,21 +2,27 @@ import React from 'react';
 import {
   BrowserRouter as Router, Route, Routes, NavLink, useParams,
 } from 'react-router-dom';
+import Card from '@mui/material/Card';
 
 import Citysearch from './citysearch';
 // import Counter from './counter';
 // import Controls from './control';
 
-function About(props) {
-  return <div> All there is to know about me </div>;
+function FutureRelease(props) {
+  return (
+    <Card className="future-release-card">
+      <div className="future-release">Future Release: WeatherNow 2.0 </div>
+      <div className="description-2"> Coming Soon: APIs for Music Streaming and Amazon Browsing.
+        WeatherNow 2.0 will include widgets for finding appropriate music
+        and equipment to prepare for travel in all weather conditions
+      </div>
+    </Card>
+  );
 }
-function Welcome(props) {
+function WeatherNowBasic(props) {
   return (
     <div>
       <Citysearch />
-      <section className="cities-section">
-        <ul className="cities-list" />
-      </section>
     </div>
   );
 }
@@ -27,8 +33,8 @@ function App(props) {
       <div>
         <Nav />
         <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<WeatherNowBasic />} />
+          <Route path="/about" element={<FutureRelease />} />
           <Route path="/test/:id" element={<Test />} />
           <Route path="*" element={<FallBack />} />
         </Routes>
@@ -41,10 +47,8 @@ function Nav(props) {
   return (
     <nav>
       <ul>
-        <li><NavLink to="/" exact="true">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2</NavLink></li>
+        <li><NavLink to="/" exact="true">Basic</NavLink></li>
+        <li><NavLink to="/about">Coming Soon</NavLink></li>
       </ul>
     </nav>
   );
