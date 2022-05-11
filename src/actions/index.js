@@ -26,8 +26,14 @@ export function fetchWeather(input, list) {
   console.log(input);
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
-  return (dispatch) => fetch(url)
-    .then((response) => response.json())
+  return (dispatch) => {
+    fetch(url)
+      .then((response) => { dispatch({ type: ActionTypes.FETCH_WEATHER, payload: response.data }); })
+      .catch((error) => {
+      // hit an error do something else!
+      });
+
+    /* response.json())
     .then((data) => {
       const {
         main, name, sys, weather,
@@ -43,11 +49,10 @@ export function fetchWeather(input, list) {
       console.log(main);
       console.log(icon);
 
-      return (data);
+      dispatch(data);
 
       // do something with response.data  (some json)
     })
-    .catch((error) => {
-      // hit an error do something else!
-    });
+    */
+  };
 }

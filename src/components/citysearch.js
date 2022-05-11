@@ -10,7 +10,7 @@ import { fetchWeather } from '../actions';
 
 function mapStateToProps(reduxState) {
   return {
-    fetchWeather: reduxState.weather,
+    weather: reduxState.data,
   };
 }
 
@@ -28,9 +28,10 @@ class Citysearch extends Component {
 
   onSubmit = (event) => {
     console.log(this.state.currentsearch);
+    event.preventDefault();
     this.props.fetchWeather(this.state.currentsearch);
     console.log('props:');
-    console.log(this.props);
+    console.log(this.props.weather);
   };
 
   render() {
