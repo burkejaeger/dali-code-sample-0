@@ -5,7 +5,6 @@ body, html {
     color: rgb(79, 79, 79)
 }
 
-
 .active {
   color: black;
   box-shadow: 0px 2px 0px black;
@@ -25,15 +24,7 @@ nav ul a{
   box-shadow: 0px 2px 0px transparent;
 }
 
-.weather-card{
-  display: flex;
-  width: auto;
-  margin-left: 30vw;
-  margin-right: 30vw;
-  margin-top: 2vh;
-  margin-bottom: 10vh;
-  padding: 20px;
-}
+// CITY SEARCH CARD DISPLAY
 
 .search-card{
   display: flex;
@@ -56,7 +47,33 @@ nav ul a{
 search-form{
   width: 100%;
 }
-  
+
+.app-name{
+  font-family: 'Rubik', sans-serif;
+  font-size: 2em;
+  margin-bottom: 3px;
+  color: #9c27b0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+// WEATHER CONDITIONS DISPLAY CARDS
+.weather-card{
+  display: flex;
+  width: auto;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 2vh;
+  margin-bottom: 10vh;
+  padding: 20px;
+}
+
+.weather-now{
+  margin-left: 5px;
+}
 
 .weather-city{
   font-size: 2em;
@@ -95,21 +112,9 @@ search-form{
   align-items: center;
 }
 
-.app-name{
-  font-family: 'Rubik', sans-serif;
-  font-size: 2em;
-  margin-bottom: 3px;
-  color: #9c27b0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
 
-.weather-now{
-  margin-left: 5px;
-}
+
+// FUTURE RELEASE PAGE
 
 .future-release-card{
   display: flex;
@@ -129,4 +134,24 @@ search-form{
 }
 .description-2{
   font-size: 1em;
+}
+
+// MOBILE VERSION DISPLAY
+
+@media only screen and (max-width: 640px) {
+  .future-release-card{
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+  }
+
+  .search-card{
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .weatther-card{
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }
