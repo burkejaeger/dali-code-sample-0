@@ -5,13 +5,7 @@ import { TextField } from '@mui/material';
 import Card from '@mui/material/Card';
 import CloudIcon from '@mui/icons-material/Cloud';
 import AirIcon from '@mui/icons-material/Air';
-// import IconButton from '@mui/material/IconButton';
 import { fetchWeather } from '../actions';
-// import { TextField } from '@mui/material';
-// const form = document.querySelector('.top-banner form');
-// const input = document.querySelector('.city-input');
-// const msg = document.querySelector('.top-banner .msg');
-// const list = document.querySelector('.cities-list');
 
 function mapStateToProps(reduxState) {
   console.log('reduxState');
@@ -49,27 +43,12 @@ class Citysearch extends Component {
     this.props.fetchWeather(this.state.currentsearch);
     // eslint-disable-next-line no-unused-expressions
     mapStateToProps();
-    // this.setState({ weather: this.props.weather });
     console.log('here');
     console.log(this.props);
     this.setState({ submitted: true });
   };
 
-  /*
-this.setState({
-          name: this.props,
-          country: this.props,
-          icon: this.props,
-          temp: this.props,
-        });
-        console.log(this.state.name);
-        console.log(this.state.country);
-        console.log(this.state.icon);
-        console.log(this.state.temp);
-      }
-    })
-  */
-
+  // This method will render a search bar as well as output for a given city
   render() {
     return (
       <div>
